@@ -23,7 +23,7 @@ attr_accessor :name, :artist, :genre
     @@genres.each do |item|
       if(@@genre_count.has_key?(item))
         cnt = @@genre_count[item]
-        cnt =+ 1
+        cnt += 1
         @@genre_count[item] = cnt
       else
         @@genre_count[item] = 1
@@ -36,7 +36,7 @@ attr_accessor :name, :artist, :genre
     @@artists.each do |item|
       if(@@artist_count.has_key?(item))
         cnt = @@artist_count[item]
-        cnt =+ 1
+        cnt += 1
         @@artist_count[item] = cnt
       else
         @@artist_count[item] = 1
