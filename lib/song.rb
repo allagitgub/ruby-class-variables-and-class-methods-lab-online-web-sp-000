@@ -48,10 +48,28 @@ attr_accessor :name, :artist, :genre
   end
 
   def self.artist_count
+    @@artists.each do |item|
+      if(@@artist_count.has_key?(item))
+        cnt = @@artist_count[item]
+        cnt += 1
+        @@artist_count[item] = cnt
+      else
+        @@artist_count[item] = 1
+      end
+    end
     @@artist_count
   end
 
   def self.genre_count
+    @@genres.each do |item|
+      if(@@genre_count.has_key?(item))
+        cnt = @@genre_count[item]
+        cnt += 1
+        @@genre_count[item] = cnt
+      else
+        @@genre_count[item] = 1
+      end
+    end
     @@genre_count
   end
 end
